@@ -4,6 +4,12 @@ Crowdsourcing in medical image analysis widens the pool of available annota- tor
 
 [1] Isic 2017 challenge. [https://challenge.isic-archive.com/data/#2017](https://challenge.isic-archive.com/data/#2017).
 
+## Documents
+
+The article is hosted at [https://thorlindberg.github.io/medical-imaging/pdf/report.pdf](https://thorlindberg.github.io/medical-imaging/pdf/report.pdf).
+
+The presentation is hosted at [https://thorlindberg.github.io/medical-imaging/pdf/presentation.pdf](https://thorlindberg.github.io/medical-imaging/pdf/presentation.pdf).
+
 ## Weekly Meeting Notes
 
 * [31. November 2021](#date-31-november-2021)
