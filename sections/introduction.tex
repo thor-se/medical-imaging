@@ -1,0 +1,45 @@
+\documentclass[../report.tex]{subfiles}
+
+\begin{document}
+
+%%% \subsection{Medical Image Analysis}
+
+Machine Learning (ML) has established itself in the field of medical imaging, as an alternative to medical expert classification. However, medical imaging models rely heavily on training data, and scarcity of data has been a hindrance in expanding the application of ML classification. \\
+
+%%% \subsection{Data scarcity}
+
+Researchers have explored a series of algorithmic approaches to addressing medical imaging data scarcity. These include Multiple Instance Learning, Multi-Task Learning, and Transfer Learning. \\
+
+% multiple instance learning
+Multiple Instance Learning (MIL) attempts to address the lack of labels for localized regions in medical imaging scans, which are a necessary requirement for performing supervised learning \cite{Ruder2017MTL}. Related tasks in MTL are referred to as auxiliary tasks, which are leveraged to generalize and help understand the main task. Ruder notes that while humans typically utilize quantized training objectives, that is a discrete or binary set of labels, auxiliary tasks in MTL do not have to be quantized \cite{Ruder2017MTL}. MTL aims to bias a machine learning model towards representations chosen by auxiliary tasks. This is called representation sharing, and commonly occurs through either hard or soft parameter sharing. MTL acts as a regularizer reducing the risk of overfitting, and thus it is beneficial to find commonalities between tasks in an environment \cite{Ruder2017MTL}.
+
+% multi-task learning
+Multi-Task Learning (MTL) is an example of leveraging multiple sources of learning. In this approach, representations between tasks related to the classification task would be shared, enabling a higher degree of generalization \cite{Ruder2017MTL}.
+
+% transfer learning
+Transfer Learning aims to reach a singular consensus based on multiple sources of learning, or transferring learning from one training dataset to another dataset. \\
+
+% crowdsourcing
+Crowdsourcing is a non-algorithmic approach to addressing data scarcity, focusing on providing a higher degree of annotation, without reliance on medical experts. Research has demonstrated the potential of crowdsourced annotations for providing accurate training data \cite{Cheplygina2020CrowdDetective}. Crowdsourcing platforms such as MTurk \cite{mturk} connect researchers with crowdsourced workers, and handle distribution of tasks amongst workers as well as payment. Researchers in medical image analysis design the annotation tasks, but have no insights into which workers provide them with annotations. These platforms provide rapid annotation of research datasets, through a large pool of workers. \\
+
+As crowdsourced workers can not be expected to have the educational backgrounds or academic criteria necessary to become a medical expert in medical imaging, it is important that tasks are designed to not only annotate, but also to educate. A choice has to be made by researchers as to which knowledge should be included and excluded. Workers need enough information to delimit classes, which should be based on the same knowledge medical experts leverage in their judgments. In the following section, the medical knowledge used in diagnosing melanomas is presented. \\
+
+%%% \subsection{Melanoma Classification}
+
+% classification features
+Melanomas are classified with a binary set of labels, that is benign or malignant. A hallmark of malignant melanoma is irregularity relative to neighboring  melanomas or melanomas in the same environment, as well as changes over time. Melanoma classification is based on a set of warning signs, the so-called ABCDE’s (Asymmetry, Border, Color, Diameter/Dark, and Evolving) \cite{Halpern2021Warning}. \\
+
+These warning signs are employed in melanoma diagnostics for similarity analysis, wherein suspected malignancy is determined based on the melanoma’s appearance relative to other melanomas. Another approach is to ‘half’ the suspected malignant melanoma in half, to compare and contrast the two halves with respects to the ABCDE’s of malignancy.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{features.pdf}
+\caption{Warning signs of malignancy \cite{Halpern2021Warning}.}
+\label{figure:ABC}
+\end{figure}
+
+A strategy for classifying melanoma is looking for irregularities within a set of melanomas. This so-called Ugly Duckling strategy relies on the concept that moles typically appear similar in appearance, and thus a malignant melanoma will appear irregular relative to its neighboring melanomas \cite{Halpern2021Warning}. \\
+
+This knowledge of crowdsourcing methodologies and melanoma classification forms the basis of this project, as well as my approach to designing annotation tasks. This project aims to develop and evaluate varied designs of annotation tasks in melanoma classification, for the purpose of determining \textit{how design decisions are perceived by annotators and whether design impacts annotation quality}.
+
+\end{document}

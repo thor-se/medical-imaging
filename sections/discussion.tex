@@ -1,0 +1,25 @@
+\documentclass[../report.tex]{subfiles}
+
+\begin{document}
+
+This project asks the cross-disciplinary question of "how should crowdsourced annotation tasks be designed?" rather than the status quo question of "how can annotation be crowdsourced?" In answering this question, I have attempted to synthesise knowledge, experiences and approaches from both medical image analysis and design research. As it turns out, this question encompasses more than I had initially anticipated, because facilitating annotation tasks requires infrastructure beyond the task. \\
+
+In order to conduct annotation, a platform for collecting data has to be planned, developed, and distributed. Collecting annotation data is a complex and asynchronous process of identifying available data, then segmenting the data and distributing tasks to workers. Once a platform exists, researchers have to plan their approach, select or develop annotation tasks, then finally collect data through crowdsourced workers. In summary, annotation task design is only a small component of a large process, and thus it is understandable or perhaps even optimal for researchers to not document or report on their design decisions, if any are made. \\
+
+I chose to design my baseline annotation task by sampling the Braindr application \cite{Braindr}, because it already constitutes an original and custom task design, existing outside a framework/platform such as MTurk. This approach provided me full control of the task design, but also required a large resource investment into the underlying infrastructure.
+
+I chose to develop the minimal amount of infrastructure necessary, opting not to leverage a distributed systems or networked approach, wherein tasks could be automatically assigned to participants. This would have let me test the tasks with a larger pool of participants, but requires too much of a time investment in a project focused on task design. \\
+
+I will also stress the importance of educating crowdsourced workers when facilitating annotation. I can not deduce anything about this from the experiment I conducted nor the results I produced, as I chose to focus on the design of the tasks themselves. However, it became evident to me through my process that a common perception of terminology and annotation influences how well participants perform their tasks.
+
+This could be explored through further work, by measuring the performance difference between crowdsourced workers presented to different narratives on annotation or different amounts of information. I speculate that while not enough information can cause misclassification by workers, it is also possible that too much information, in the small amount of time during facilitation of annotation tasks, leads to confusion and thus worse performance. \\
+
+As noted by Herrera et al. \cite{herrera2014crowd}, the amount of crowdsourced workers annotating influences the results of an experiment. I can not deduce from my results whether this is reflected in my experiment, but I speculate that an annotator with an incorrect perception of what constitutes malignancy is more likely to repeat misclassification of melanomas.
+
+This could be determined by analysing trends in the annotation data, presenting to which degree each participant repeated the same type of misclassification relative to the ground truth by medical experts, in example: classifying malignant melanoma (1) as benign (0). It may be useful to build these statistics into the infrastructure, to identify misclassification during annotation tasks or immediately afterwards, allowing researchers to gather feedback on why annotators chose the wrong classification. \\
+
+Finally, this project is a synthesis of medical image analysis and design research, aiming to assess the influence of design on data quality. It has become evident to me that a team of two or more people, with at least one representative from each discipline, may have been more successful at achieving the desired outcome of this project. Cross-disciplinary representation allows for the negotiation of terminology and methodology between two people with expertise in their respective discipline.
+
+Cross-disciplinary negotiations would lessen the occurrence of roadblocks in the process, and ensure that the project and its experiment was phrased within the parameters of the medical image analysis discipline.
+
+\end{document}

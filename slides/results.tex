@@ -1,0 +1,35 @@
+\documentclass[../presentation.tex]{subfiles}
+
+\begin{document}
+\twocolumn
+\null
+\vfill
+
+\large{\textbf{Comparison}} \\
+\large{Accuracy scores} \\
+\large{ISIC ground truth} \\
+
+\large{\textbf{Annotation Quality}} \\
+\large{\textit{1. Intermediary classifications (1) are perceived as benign classifications (0).}} \\
+\large{\textit{2. Annotators are given an intermediary option between benign or malignant.}}
+
+\vfill
+\pagebreak
+\null
+\vfill
+
+\begin{table}[H]
+\raggedleft
+\csvautotabular{data/summary1.csv}
+\caption*{\raggedleft{2 → 1}}
+\end{table}
+
+\begin{table}[H]
+\raggedleft
+\csvautotabular{data/summary2.csv}
+\caption*{\raggedleft{1 → 0 and 2 → 1}}
+\end{table}
+
+\vfill
+\onecolumn
+\end{document}

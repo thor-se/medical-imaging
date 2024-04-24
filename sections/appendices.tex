@@ -1,0 +1,53 @@
+\documentclass[../report.tex]{subfiles}
+
+\begin{document}
+
+\textbf{Appendix 1: Annotations collected in the experiment} \\
+
+\begin{table}[h!]
+\centering
+\resizebox{0.91\textwidth}{!}{%
+\csvautotabular{data/annotations.csv}
+}
+\caption{Abbreviations used are \textit{e = ENHANCE, i = ISIC, a = Annotator}.}
+\end{table}
+
+\pagebreak
+
+\textbf{Appendix 2: Annotations corrected from 2 to 1} \\
+
+\begin{table}[h!]
+\centering
+\resizebox{0.91\textwidth}{!}{%
+\csvautotabular{data/correction1.csv}
+}
+\caption{Abbreviations used are \textit{e = ENHANCE, i = ISIC, a = Annotator}.}
+\label{appendix2}
+\end{table}
+
+\pagebreak
+
+\textbf{Appendix 3: Annotations corrected from 1 to 0 and 2 to 1} \\
+
+\begin{table}[h!]
+\centering
+\resizebox{0.91\textwidth}{!}{%
+\csvautotabular{data/correction2.csv}
+}
+\caption{Abbreviations used are \textit{e = ENHANCE, i = ISIC, a = Annotator}.}
+\label{appendix3}
+\end{table}
+
+\pagebreak
+
+\textbf{Appendix 4: Accuracy scores of annotations from table \ref{appendix2} and \ref{appendix3}} \\
+
+\begin{table}[h!]
+\centering
+\resizebox{0.91\textwidth}{!}{%
+\csvautotabular{data/scores.csv}
+}
+\caption{Accuracy scores relative to the ground truth in the ISIC 2017 dataset.}
+\end{table}
+
+\end{document}

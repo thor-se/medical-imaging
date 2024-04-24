@@ -1,0 +1,37 @@
+\documentclass[../report.tex]{subfiles}
+
+\begin{document}
+
+This experiment yielded a total of 1200 annotations of (0, 1, 2) for asymmetry, 20 annotations (one person participant) for each of the 60 images in the dataset. These results were adjusted for comparison with the ISIC expert classifications \cite{ISIC2017Challenge} annotations, by correcting the intermediary value to one of the binary (0, 1) values. This yields two variants of the annotations, one where the upper value (2) is corrected to the malignancy value (1), and one where the intermediary value (1) is corrected to the benign value (0) and the upper value (2) is corrected to the malignancy value (1). \\
+
+\begin{table}[h!]
+\centering
+\csvautotabular{data/summary1.csv}
+\caption{Accuracy scores of asymmetry annotations produced by the ENHANCE project (MTurk) \cite{Ralf2021ENHANCE} and the annotations produced through my experiment (figure \ref{fig:application}. Corrected upper value (2) to malignancy value (1).}
+\label{table:asymmetry1}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\csvautotabular{data/summary2.csv}
+\caption{Accuracy scores of asymmetry annotations produced by the ENHANCE project (MTurk) \cite{Ralf2021ENHANCE} and the annotations produced through my experiment (figure \ref{fig:application}. Corrected intermediary value (1) to benign value (0) and upper value (2) to malignancy value (1).}
+\label{table:asymmetry2}
+\end{table}
+
+As seen in table \ref{table:asymmetry1} and \ref{table:asymmetry2}, the participating annotators produced consistently higher accuracy scores than the MTurk workers \cite{Ralf2021ENHANCE}, when using expert classifications from the ISIC 2017 dataset \cite{ISIC2017Challenge} as reference. \\
+
+It is important to stress that while this project aimed to only annotate asymmetry, the MTurk workers produced annotations for asymmetry, border, and color, which were added as weighted features to a baseline \cite{Ralf2021ENHANCE}. This means the accuracy scores are not representative of the MTurk workers' complete annotation work, as multiple features are available. It also means the accuracies for each subset of the ISIC 2017 dataset \cite{ISIC2017Challenge} should not be compared directly, as the accuracy scores only represent asymmetry annotations.
+
+\pagebreak
+
+Data quality was defined in this experiment as indifference to the ENHANCE \cite{Ralf2021ENHANCE} annotations. These results thus indicate that the produced annotations are of higher quality when: \\
+
+\textbf{1. Intermediary classifications (1) are perceived as benign classifications (0).} This is reflected in the smaller difference between MTurk annotations and this project's annotations in table \ref{table:asymmetry2}, relative to table \ref{table:asymmetry1}. This suggests that the crowdsourced annotators participating in this experiment annotated more accurately when their intermediary classifications are considered benign rather than malignant. This speaks to how annotators perceive the tasks, likely interpreting the intermediary classification as "not malignant, not quite benign" or "unsure". \\
+
+\textbf{2. Annotators are given an intermediary option between benign or malignant.} This is reflected in the smaller difference between MTurk annotations and this project's annotations for task 2 and 3 in both table \ref{table:asymmetry1} and \ref{table:asymmetry2}, relative to task 1. Task 2 in table \ref{table:asymmetry2} is especially close (0.02 difference), further suggesting that the best fit intermediary represents a benign or malignant classification, rather than an in-between classification as in task 3. \\
+
+In addressing the hypothesis, these findings indicate that task 2 produces the highest quality of annotation data, out of the three designed tasks. This is reflected in the fact that task 2 and 3 share similar interaction profiles, while producing a higher quality of annotation data than task 1. It also indicates that annotation tasks perform better when their interaction profiles include the attributes: \textit{slow, diverging and spatial proximity}. While task 3 performs slightly better according to table \ref{table:asymmetry1}, the larger difference between task 2 and 3 according to table \ref{table:asymmetry2} suggests that the presence of \textit{spatial separation} in task 3 lessens its accuracy. \\
+
+These results corroborate the participants' reactions to the three designed annotation tasks. Task 1 lacks any intermediary classification, forcing annotators to classify images as benign or malignant irrespective of whether these classifications represent the annotator's perception. Task 2 addresses this issue by providing a reference image for similarity comparison and an intermediary classification that produces an annotation equal to the reference. Task 3 provides an in-between classification, which greatly improves the accuracy relative to the baseline, but may be perceived as confusing due to the uncertain nature of this classification. These in-between annotations might be better filtered out, and only provided to let the annotator continue annotating when uncertain.
+
+\end{document}
