@@ -6,9 +6,9 @@ Crowdsourcing in medical image analysis widens the pool of available annota- tor
 
 ## Documents
 
-The article is hosted at [https://thorlindberg.github.io/medical-imaging/pdf/report.pdf](https://thorlindberg.github.io/medical-imaging/pdf/report.pdf).
+The article is hosted at [https://thordotcomputer.github.io/medical-imaging/pdf/report.pdf](https://thordotcomputer.github.io/medical-imaging/pdf/report.pdf).
 
-The presentation is hosted at [https://thorlindberg.github.io/medical-imaging/pdf/presentation.pdf](https://thorlindberg.github.io/medical-imaging/pdf/presentation.pdf).
+The presentation is hosted at [https://thordotcomputer.github.io/medical-imaging/pdf/presentation.pdf](https://thordotcomputer.github.io/medical-imaging/pdf/presentation.pdf).
 
 ## Weekly Meeting Notes
 
